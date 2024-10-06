@@ -1,0 +1,798 @@
+/* Grundläggande styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.related-products h3 {
+  text-align: center;
+}
+
+
+/* Vänstra delen med logotypen */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+}
+
+
+/* Högra delen med ikonerna */
+
+/* Navigering */
+nav {
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+
+nav a:hover {
+  color: #f00d0d;
+}
+
+/* Hero-sektionen */
+.hero {
+  background: linear-gradient(to right, #f8bed1, #ffffff);
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+  box-shadow: 0 2px 15px rgba(250, 187, 187, 0.2);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+}
+
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 500px;
+}
+
+/* Stil för Nyhet-badgen */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.rubrik-hero {
+  font-size: 2em;
+}
+
+.hero h2 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Produktsektion */
+.container {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.product-grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.product .price {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+button.add-to-cart,
+.product button {
+  background-color: #010504;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button.add-to-cart:hover,
+.product button:hover {
+  background-color: #000000;
+}
+
+.product .wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.product .wishlist:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+/* Rabattsektion */
+.discount-section {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.discount-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.discount-section input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.discount-section button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.discount-section button:hover {
+  background-color: #2c3e50;
+}
+
+/* Kundtjänstknapp */
+.kundtjanst-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.kundtjanst-btn i {
+  font-size: 1.5em;
+}
+
+/* Produktsidan */
+.product-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  padding-top: 10px;
+  background-color: #f4f4f4;
+}
+
+
+/* Produktsidan */
+.related-products .product img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer layout */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+
+/* Kolumnlayouten i footern */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid div {
+  text-align: left;
+}
+
+.footer-grid h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-grid p {
+  margin: 5px 0;
+}
+
+
+/* Chatt-popup */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.chat-popup-header {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  font-size: 1.2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-popup-body {
+  padding: 10px;
+  height: 280px;
+  overflow-y: auto;
+  font-size: 1em;
+}
+
+.chat-popup-footer {
+  display: flex;
+  padding: 10px;
+}
+
+.chat-popup-footer input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-popup-footer input[type="submit"] {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+
+/* Grundläggande stil för spots */
+.spot-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolumner */
+  gap: 20px;
+  margin: 20px 0;
+
+}
+.spot {
+  background-color: transparent;
+  padding: 0; /* Ta bort padding */
+  border-radius: 0; /* Ta bort rundade hörn */
+  box-shadow: none; /* Ta bort skuggan */
+  position: relative;
+}
+
+
+.spot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 300px;
+  
+}
+
+.spot-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Media query: Döljer spots på skärmar mindre än 1024px */
+@media (max-width: 1024px) {
+  .spot-container {
+    display: none;
+  }
+
+  .hero{
+    flex-direction: column; /* Ändrar kolumn för mindre skärmar */
+  }
+
+}
+
+.searchbar-header {
+  position: relative;
+  width: 100%;
+  justify-content: end;
+}
+
+.searchbar-header i {
+  position: absolute;
+  top: 50%; /* För att centrera vertikalt */
+  left: 10px; /* Placera ikonen 10px från vänster */
+  transform: translateY(-50%); /* Flytta den 50% uppåt för perfekt centrering */
+  color: #0a0303;
+}
+
+.searchbar-header input {
+  height: 25px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  border: 2px solid #2b2929;
+  padding-left: 40px; /* Utrymme för ikonen inuti sökfältet */
+}
+
+
+/* Grundläggande styling för benefits-sektionen */
+.benefits-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 30px; 
+  padding: 20px 0;
+}
+
+.benefit {
+  display: flex; /* Gör att ikonen och texten är horisontellt */
+  align-items: center; 
+  gap: 10px; 
+  flex-basis: calc(50% - 30px); /* För skärmar upp till 1024px */
+  justify-content: center; 
+  text-align: center;
+}
+
+.benefit i {
+  font-size: 2.5em; /* Storlek på ikonerna */
+  color: #333;
+}
+
+.benefit p {
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+/* Media query för skärmar över 1024px */
+@media (min-width: 1024px) {
+  .benefits-section {
+    justify-content: center; 
+    gap: 30px;
+  }
+
+  .benefit {
+    flex-basis: calc(25% - 30px); /* Tar upp 25% av bredden för att placera fyra element i rad */
+  }
+}
+
+/* Sticky Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+  background-color: white;
+  position: sticky; /* Sticky header */
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-right i {
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  
+}
+
+.navbar-right i:hover {
+  color: #ff0000;
+  transition: color 0.3s;
+}
+
+/* Toggle visibility */
+.navbar-right-phone {
+  display: none;
+}
+
+
+/* Produktdetaljer */
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Textdelens styling */
+.product-info {
+  flex: 1;
+}
+
+/* Bildens styling */
+.product-image {
+  width: 100%; /* Bilden täcker hela bredden av sin förälder */
+  height: auto; /* Bevara proportionerna */
+  max-width: 500px; /* Justera layout */
+  object-fit: cover; /* Fyller hela sin behållare */
+  border-radius: 8px; /* Rundade hörn */
+  background-color:#f4f4f4;
+}
+
+@media (min-width: 640px) {
+  .product-image {
+    max-width: 350px;
+    height: auto; 
+  }
+  .accordion {
+    display: none;
+  }
+
+}
+
+.accordion-button {
+  background-color: #eeeeee;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.4s ease;
+}
+
+.accordion-button:hover {
+  background-color: #ffffff;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.footer-copy {
+  text-align: center;
+  padding-top: 30px;
+}
+
+  /* Styling för mindre skärmar under 640px */
+  @media (max-width: 640px) {
+    .product-detail {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .product-image {
+      width: 100%; 
+    }
+  
+    .product-info {
+      text-align: center; 
+      margin-top: 20px; 
+    }
+
+  nav a:nth-child(3),
+  nav a:nth-child(4),
+  nav a:nth-child(5) {
+    display: none; 
+  }
+
+    .related-products {
+      display: none;
+    }
+  
+    footer {
+      background: linear-gradient(to right, #f8bed1, #ffffff);
+      color: #000000;
+      padding: 20px 0;
+      margin-top: 40px;  
+    }
+    
+  .navbar-right i {
+    font-size: 20px;
+    
+  }
+
+  .navbar-left .logo {
+    height: 180px;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-grid div {
+    margin-bottom: 20px;
+  }
+
+  .footer-grid div:nth-child(1) {
+    display: none;
+  }
+
+  /* Endast visa specifika sektioner */
+
+  .footer-grid div:nth-child(2),
+  .footer-grid div:nth-child(4) {
+    display: block;
+  }
+  
+  .searchbar-header {
+    display: none;
+  }
+  
+  .benefits-section {
+    flex-direction:column ; /* Benefits vertikalt */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .benefit {
+    flex-basis: 100%; /* Tar upp hela bredden på mindre skärmar */
+  }
+
+  .navbar {
+    padding: 20px 30px; /* Öka padding för att göra navbaren större */
+    height: 180px; /* Justera höjden på navbar med loga*/
+  }
+
+  .navbar a {
+    font-size: 1.2em; /* Gör texten i länkarna större */
+  }
+
+  .logo {
+    height: 60px; /* Justera logotypens höjd */
+  }
+
+
+  .navbar-right i {
+    font-size: 24px; /* Justera ikonerna  */
+    margin-right: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center; /* Centrera logotypen i navbaren */
+  }
+
+  .logo {
+    width: 100%; /* Logotypen täcka hela bredden på skärmen */
+    height: auto; /* Behåll logotypens proportioner */
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .navbar-right-phone {
+    display: flex;
+    align-items: center;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+  .navbar-right-phone-search {
+    position: relative;
+    width: 70%;
+  }
+  .navbar-right-phone-search input {
+    height: 32px;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    border: 2px solid #464646;
+    padding-left: 40px;
+  }
+  .navbar-right-phone-menu {
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+  }
+  .navbar-right-phone i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  .navbar-right-phone i:hover {
+    color: #ff0000;
+    transition: color 0.3s;
+  }
+  .navbar-right-phone-search i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #0a0303;
+  }
+
+  nav {
+    width: 97%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    text-align: left;
+  }
+
+  .product-detail {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .product-image {
+    width: 100%; 
+  }
+
+  .product-info {
+    text-align: center; 
+    margin-top: 20px; 
+  }
+  
+  .footer-grid {
+    display: none;
+  }
+}
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.wishlist i {
+  color: #000;
+}
+
+.wishlist i:hover {
+  color: #ff0000; /* Färgen när musen hovrar över ikonen */
+}
+
