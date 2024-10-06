@@ -1,0 +1,176 @@
+/* Grundläggande styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Header-stil */
+.admin-header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Layout: Flexbox för att dela sidan i två delar */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidomeny-stil */
+.admin-sidebar {
+    width: 250px;
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+.admin-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.admin-sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Huvudinnehåll-stil */
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Ny produkt knapp */
+.new-product-btn {
+    float: right; /* Flyttar knappen till höger */
+    padding: 5px 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+  
+  .new-product-btn:hover {
+    background-color: #0056b3; /* Ändrar färg när knappen hovras */
+  }
+  
+
+/* Tabell-stil */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form-stil */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Dra och ändra höjd */
+}
+
+/* Checkboxar och kategorier */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px; 
+    font-size: 18px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block; /* Gör knappen liten och anpassad till textinnehållet */
+    width: auto; /* Gör bredden beroende av innehållet */
+    max-width: 200px; 
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+    }
+}
+
+
+/* Stil för checkboxar och deras etiketter */
+.categories label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .categories input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 10px; /* Rundade hörn för checkbox */
+  }
+  
+
+  
